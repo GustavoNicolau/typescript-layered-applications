@@ -1,7 +1,7 @@
 {
-  "name": "template-node-ts",
-  "version": "0.0.0-development",
-  "description": "Template project for node.js and Typescript with workflows and semantic releasing",
+  "name": "typescript-layer-applications",
+  "version": "0.0.1",
+  "description": "T",
   "main": "dist/index.js",
   "scripts": {
     "postinstall": "[ -d post-clone-scripts ] && ./post-clone-scripts/install-semantic-release.sh && rm -rf ./post-clone-scripts || true",
@@ -14,17 +14,18 @@
     "lint:fix": "npm run lint -- --fix",
     "start": "node dist/index.js",
     "start:dev": "tsnd --rs ./src/index.ts",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release",
+    "dev": "tsnd --rs ./src/index.ts"
   },
-  "author": "Lucas Santos <hello@lsantos.dev>",
+  "author": "Gustavo Nicolau",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/khaosdoctor/template-node-ts/issues"
+    "url": "https://github.com/GustavoNicolau/typescript-layered-applications/issues"
   },
-  "homepage": "https://github.com/khaosdoctor/template-node-ts#readme",
+  "homepage": "https://github.com/GustavoNicolau/typescript-layered-applications#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/khaosdoctor/template-node-ts"
+    "url": "https://github.com/GustavoNicolau/typescript-layered-applications"
   },
   "devDependencies": {
     "@commitlint/cli": "^16.1.0",
@@ -35,6 +36,7 @@
     "@semantic-release/release-notes-generator": "^10.0.3",
     "@types/jest": "^27.4.0",
     "@types/node": "^17.0.10",
+    "@types/uuid": "^8.3.4",
     "@typescript-eslint/eslint-plugin": "^5.10.0",
     "@typescript-eslint/parser": "^5.10.0",
     "commitizen": "^4.2.4",
@@ -81,5 +83,12 @@
       "@semantic-release/github",
       "@semantic-release/git"
     ]
+  },
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "express": "^4.18.1",
+    "luxon": "^2.4.0",
+    "uuid": "^8.3.2",
+    "zod": "^3.17.3"
   }
 }
